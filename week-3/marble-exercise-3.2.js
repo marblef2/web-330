@@ -4,7 +4,7 @@
 ; Author: Professor Krasso
 ; Modified By: Fred Marble
 ; Date:   23 January 2021
-; Description: Prototypes
+; Description: Factory Pattern
 ;===========================================
 */
 //Linking of the header file.
