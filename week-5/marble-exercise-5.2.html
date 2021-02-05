@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marble- Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/5DACB2B0-5003-6543-8B39-D8EE6E4FC44C/main.js"
+      charset="UTF-8"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-dark bg-dark">
+          <a href="#" class="navbar-brand">Home</a>
+      </nav>
+
+      <br/><br/>
+      <div class="container">
+          <div class="col-md-12">
+              <h2>Marble Exercise 5.3- The Proxy Pattern</h2>
+
+              <button class="btn btn-primary" id="btnPreviewProxy">Preview the Proxy</button>
+
+              <br/>
+              <span id="spanProxyResults"></span>
+          </div>
+      </div>
+    <script>
+      $(function() {
+
+          let car={
+              model:"Cruze",
+              make: "Chevy",
+              display: function(){
+                  //clearing the span tag.
+                  $("#spanProxyResults").html("");
+
+                  $("#spanProxyResults").append("<br/>" + this.make + "<br/>" + this.model);
+              
+                }
+          };
+
+          $("#btnPreviewProxy").click($.proxy(truck, "display"));
+      });
+    </script>
+  </body>
+</html>
